@@ -11,6 +11,8 @@
   width: 30vw;
   border-radius: 1em;
   text-align: center;
+  padding: 0.5em;
+  color: blue;
 }
 
 .registerTitleDesign {
@@ -23,6 +25,11 @@
   background-color: aqua;
   color: white;
   width: 10vw;
+  padding: 0.7em;
   border-radius: 0.5em;
   margin: 1em 0 0 0;
+}
+
+.errorDesign {
+  color: red;
 }
