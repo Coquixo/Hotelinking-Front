@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { registerUser } from "../../services/apiCalls";
 import { errorCheck } from "../../services/errorManage";
 import Footer from "../Footer/Footer";
 import "./Register.scss";
 
 const Register = () => {
+    const navigate = useNavigate();
     const [user, setUser] = useState({
         name: "",
         surname: "",
@@ -19,17 +21,20 @@ const Register = () => {
         passwordError: "",
     });
 
+
     const inputHandler = (e) => {
         setUser({
             ...user,
             [e.target.name]: e.target.value,
         });
-        console.log(user);
     };
 
     const registerAttempt = () => {
         try {
             registerUser();
+            setTimeout(() => {
+                navigate("/login")
+            }, 500)
         } catch (error) {
             return error;
         }

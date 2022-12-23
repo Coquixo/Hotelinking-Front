@@ -13,7 +13,7 @@ export const errorCheck = (value, type) => {
           value
         )
       ) {
-        return `${type.toUpperCase()} : Incorrect format: Example@gmail.com`;
+        return `${type.toUpperCase()} : Incorrect format: example@gmail.com`;
       } else {
         return "";
       }
